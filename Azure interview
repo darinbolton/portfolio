@@ -1,0 +1,97 @@
+#Where can you apply NSG's at layer 3 (Networking)
+    Subnets
+    Nic
+
+#Name the primary difference between a D and DS series VM
+    DS uses premium storage (ssd)
+        *Think of the S as SSD
+
+#What are quota limitations?
+    Resource limitations placed by Microsoft. Example, you can have 20 VCPU's per subscription
+
+#What two endpoints are created by default on Windows instances?
+    Powershell
+    Remote Desktop (RDP)
+
+#Powershell commands to run ARM-based virtual machines?
+    Get-AzVM
+    Get-AzureVM
+
+#Name the VPN gateway SKUs
+    Basic
+    VPNgw1, VPNgw2, VPNgw3
+
+#Name two virtual machine extensions offered by Microsoft?
+    Automation DSC
+    Custom Script Agent
+
+#Primary risk to using the temporary drive on a virtual machine instance?
+    Storage is ephemeral - the data does not persist through a reboot
+
+#What is the VM standard managed disk input/output?
+    50,000
+
+#List the available storage devices within a storage account
+    Blob, table, queue, file
+
+#Name 3 types of PaaS offered by AzureVM
+    SQL database
+    Azure Container services (instances)
+    Operating systems
+
+#Name IaaS offered by Azure:
+    Compute, storage, networking
+
+#Name SaaS offered by Azure:
+    Hosted applications, Office365
+
+#List primary ways an administrator can lock down an Azure network at layer 3?
+    NSG's
+    Endpoint ACL's
+
+#What is a scale set?
+    Configuration used to manage a group of identical load balanced VM's and provides high availability
+
+#What is autoscaling?
+    Autoscaling allows a a scale set to expand horizontally as resources reach a certain threshold or at a certain point in time.
+
+#Difference between Azure AD and Azure Acitive Directory Domain?
+    Azure AD is fully managed in the cloud, Azure Active Directory Domain is used to integrete on-premise AD with Azure
+
+PIM = Privileged Identity Management
+    Allows you to assign permissions permanently or time-based
+
+#What are the different cloud deployment models?
+    Public cloud, private cloud, hybrid cloud
+
+#What are roles and why do we use them?
+    There are 3 types of roles in Azure - Web, Worker, and VM. Web roles deploy websites, worker roles execute background tasks, 
+    and VM roles are used to schedule tasks and other windows services and to customize the machine on which the web and worker role
+    is running.
+
+#What would you use to connect Active Directory Domain Services on premise to Azure AD?
+    AD Connect
+        -Offers synchronization services, AD Federation Services, Health monitoring
+
+#What is a deployment slot?
+    Stage environments - essentially a copy of the live environment that can be flipped to production
+
+VIRTUAL MACHINES:
+
+A - Basic 
+    Basic version of the A series for testing and development
+A - Standard
+    General-purpose VMs
+B - Burstable
+    Instances that can burst to full capacity of the CPU when needed
+        -Stores credits during the time the CPU is not being fully utilized. Credits are used to burst the CPU.        
+D - General Purpose
+    Built for enterprise applications. DS Instances offer SSD storage
+        -Dsv3 VM's are identifiable by the number following the D. Standard_D2_v3 has 2 cores with 8GB RAM. Standard_D4_v3 has 4 cores
+        16GB RAM. D8 has 8 cores, 32GB, etc. Always a 1:4 ratio between cores and RAM.
+E - Memory Optimized
+    High memory-to-CPU core ratio. ES instances offer SSD storage.
+F - CPU Optimized
+    High CPU core-to-memory ratio. FS instances offer SSD storage.
+G - Godzilla
+    Very large instances ideal for large databases and big data use cases.
